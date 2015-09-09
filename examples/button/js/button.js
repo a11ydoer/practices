@@ -33,7 +33,7 @@ function printButtonEventHandler(event) {
 
 function alertButtonEventHandler(event) {
   var type = event.type;
-  var message = 'Hej, hello, ciao, こんにちは';
+  var message = 'Hej, hello, ciao, こんにちは, 안녕';
 
   // Grab the keydown and click events
   if (type === 'keydown') {
