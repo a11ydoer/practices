@@ -1,15 +1,18 @@
 function init() {
   // Create variables for the various buttons
   var printButton = document.getElementById('print');
-  var alertButton =  document.getElementById('button');
+  var alertButton1 =  document.getElementById('alert1');
+  var alertButton2 =  document.getElementById('alert2');
   var toggleButton = document.getElementById('toggle');
 
   // Add event listeners to the various buttons
   printButton.addEventListener('click', printButtonEventHandler);
   printButton.addEventListener('keydown', printButtonEventHandler);
 
-  alertButton.addEventListener('click', alertButtonEventHandler);
-  alertButton.addEventListener('keydown', alertButtonEventHandler);
+  alertButton1.addEventListener('click', alertButtonEventHandler);
+  alertButton1.addEventListener('keydown', alertButtonEventHandler);
+
+  alertButton2.addEventListener('click', alertButtonEventHandler);
 
   toggleButton.addEventListener('click', toggleButtonEventHandler);
   toggleButton.addEventListener('keydown', toggleButtonEventHandler);
@@ -37,6 +40,7 @@ function alertButtonEventHandler(event) {
 
   // Grab the keydown and click events
   if (type === 'keydown') {
+    alert(event.keyCode)
     // If either enter or space is pressed, execute the funtion
     if (event.keyCode === 13 || event.keyCode === 32) {
       alert(message);
