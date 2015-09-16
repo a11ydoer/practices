@@ -33,6 +33,7 @@
           <th>Technique</th> 
           <th>Button</th>
           <th>Accessibility Feature</th>
+          <th>Source Code</th>
         </tr>  
       </thead>
       <tbody>
@@ -50,6 +51,13 @@
               <li><code>div</code> element has <code>tabindex="0"</code> to become part of tab order of the page.</li>
             </ul>
           </td>
+          <td>
+          <div id="print-sc1">
+    
+         </div>
+    
+        
+          </td>
         </tr>
         <tr>
         <td>Toggle button</td> 
@@ -65,6 +73,11 @@
               <li>Aria property/status from <code>aria-pressed</code> attribute.</li>
         </ul>
         </td>
+        <td>
+        <div id="mute-sc1">
+    
+        </div>
+          </td>
         </tr>
         <tr>
           <td>Push button</td> 
@@ -79,6 +92,11 @@
               <li><code>a</code> element has <code>tabindex="0"</code> to become part of tab order of the page.</li>
             </ul>
           </td>
+          <td>
+            <div id="alert-sc">
+    
+            </div>
+          </td>
         </tr>
         <tr>
           <td>Non compliant</td> 
@@ -90,6 +108,10 @@
             <ul>
               <li>It is a bad practice because it does not support space bar for button activiation.</li>
             </ul>
+          </td>
+          <td>
+            <div id="noncompliant-sc">
+            </div>
           </td>
         </tr>
       </tbody>
@@ -157,13 +179,16 @@
       <li>Javascript: <a href="js/button.js" type="text/javascript">link.js</a></li>
     </ul>
     
-    <div id="sc1">
-    
-    </div>
+   
     
     <script>
-      sourceCode.add('sc1', 'example')
-      sourceCode.make()
+          
+          sourceCode.add('print-sc1', 'print')
+          sourceCode.add('mute-sc1', 'toggle')
+          sourceCode.add('alert-sc', 'alert1')
+          sourceCode.add('noncompliant-sc', 'alert2')
+          sourceCode.make()
+          
     </script>
 
 </body>
