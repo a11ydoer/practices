@@ -92,8 +92,6 @@ aria.widget.SourceCode.prototype.createCode = function(location, spaces, node) {
     return false;
   }
 
-  if (!node) return;
-
   var i;
 
   var node_name = node.nodeName.toLowerCase();

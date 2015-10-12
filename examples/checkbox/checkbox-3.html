@@ -15,80 +15,83 @@
     </header>
     
     <main role="main">
-      <h1>Checkbox 3</h1>
-      <h2 id="id_example">Coding Example</h2>
-      <div id="example">Sandwich Condiments
+      <h1>Checkbox 3: Mixed state checkbox</h1>
+      <div  class="group" id="example">
+          <h3 id="gdesc1">Sandwich Condiments</h3>
 
-              <div  id="cb1" class="checkboxes" role="group" aria-labelledby="cond">
-                          <div id="cb1all"
-                              role="checkbox" 
-                              class="groupbox"
-                              aria-checked="false" 
-                              tabindex="0"
-                              onclick="groupCheckbox(event)" 
-                          >
-                              <img src="./images/checkbox-unchecked-black.png" role="presentation">
-                             <p> All condiments</p>
-                           </div>  
-                          <div id="cb1a" 
-                              role="checkbox" 
-                              class="checkbox"
-                              aria-checked="false" 
-                              aria-describedby="desc1"
-                              tabindex="0"
-                              onkeydown="toggleCheckbox(event)" 
-                              onclick="toggleCheckbox(event)" 
-                              onfocus="focusCheckbox(event)" 
-                              onblur="blurCheckbox(event)"
-                              >
-                              <img src="./images/checkbox-unchecked-black.png" role="presentation">
-                              Lettuce
-                          </div>
-                          
-                          <div id="cb1b" 
-                              role="checkbox" 
-                              class="checkbox"
-                              aria-checked="false" 
-                              aria-describedby="desc2"
-                              tabindex="0"
-                              onkeydown="toggleCheckbox(event)" 
-                              onclick="toggleCheckbox(event)" 
-                              onfocus="focusCheckbox(event)" 
-                              onblur="blurCheckbox(event)">
-                              <img src="./images/checkbox-unchecked-black.png" role="presentation">
-                              Tomato
-                          </div>
-                          
-                          <div id="cb1c" 
-                              role="checkbox" 
-                              class="checkbox"
-                              aria-checked="false" 
-                              aria-describedby="desc3"
-                              tabindex="0"
-                              onkeydown="toggleCheckbox(event)" 
-                              onclick="toggleCheckbox(event)" 
-                              onfocus="focusCheckbox(event)" 
-                              onblur="blurCheckbox(event)">
-                              <img src="./images/checkbox-unchecked-black.png" role="presentation">
-                              Mustard
-                          </div>
-                          
-                          <div id="cb1d" 
-                              role="checkbox" 
-                              class="checkbox"
-                              aria-checked="false" 
-                              aria-describedby="desc4"
-                              tabindex="0"
-                              onkeydown="toggleCheckbox(event)" 
-                              onclick="toggleCheckbox(event)" 
-                              onfocus="focusCheckbox(event)" 
-                              onblur="blurCheckbox(event)">
-                              <img src="./images/checkbox-unchecked-black.png" role="presentation">
-                              Sprouts
-                          </div> 
-                      
-                    </div>
-      </div>
+          <div id="gcb1"
+              role="checkbox" 
+              class="group_checkbox"
+              aria-checked="false" 
+              aria-describedby="gdesc1"
+              tabindex="0"
+              onclick="toggleGroupCheckbox(event)" 
+              onkeydown="toggleGroupCheckbox(event)" 
+              onfocus="focusCheckbox(event)" 
+              onblur="blurCheckbox(event)"
+          >
+            <img src="./images/checkbox-unchecked-black.png" role="presentation">
+            All condiments
+          </div>
+
+          <div 
+              role="checkbox" 
+              class="checkbox"
+              aria-checked="false" 
+              aria-describedby="gdesc1"
+              tabindex="0"
+              onkeydown="toggleCheckbox(event)" 
+              onclick="toggleCheckbox(event)" 
+              onfocus="focusCheckbox(event)" 
+              onblur="blurCheckbox(event)"
+              >
+              <img src="./images/checkbox-unchecked-black.png" role="presentation">
+              Lettuce
+          </div>
+                  
+          <div 
+              role="checkbox" 
+              class="checkbox"
+              aria-checked="false" 
+              aria-describedby="desc2"
+              tabindex="0"
+              onkeydown="toggleCheckbox(event)" 
+              onclick="toggleCheckbox(event)" 
+              onfocus="focusCheckbox(event)" 
+              onblur="blurCheckbox(event)">
+              <img src="./images/checkbox-unchecked-black.png" role="presentation">
+              Tomato
+          </div>
+                  
+          <div  
+              role="checkbox" 
+              class="checkbox"
+              aria-checked="false" 
+              aria-describedby="desc3"
+              tabindex="0"
+              onkeydown="toggleCheckbox(event)" 
+              onclick="toggleCheckbox(event)" 
+              onfocus="focusCheckbox(event)" 
+              onblur="blurCheckbox(event)">
+              <img src="./images/checkbox-unchecked-black.png" role="presentation">
+              Mustard
+          </div>
+                  
+          <div  
+              role="checkbox" 
+              class="checkbox"
+              aria-checked="false" 
+              aria-describedby="gcb1"
+              tabindex="0"
+              onkeydown="toggleCheckbox(event)" 
+              onclick="toggleCheckbox(event)" 
+              onfocus="focusCheckbox(event)" 
+              onblur="blurCheckbox(event)">
+              <img src="./images/checkbox-unchecked-black.png" role="presentation">
+              Sprouts
+          </div> 
+              
+        </div>
       <h2 id="id_a11yfeature">Authoring Feature</h2>
              <ul>
                 <li><code>div</code> element with <code>role="checkbox"</code>.</li>
