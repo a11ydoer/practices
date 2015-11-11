@@ -99,6 +99,11 @@ aria.widget.SourceCode.prototype.createCode = function(location, spaces, node) {
   var node_name = node.nodeName.toLowerCase();
 
   location.innerHTML = location.innerHTML + "<br/>" + spaces + "&lt;" + node_name;
+
+  if (node.id  && node.id.length) {
+       location.innerHTML = location.innerHTML + "&nbsp;id=\"";
+       location.innerHTML = location.innerHTML + node.id + "\"";
+  }
   
   for(i=0; i < node.attributes.length; i++ ) {
  

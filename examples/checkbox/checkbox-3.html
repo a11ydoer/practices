@@ -23,52 +23,30 @@
 
     <div  class="group" id="example"> 
 
-      <h2> Fieldset and legend example</h2>
-      <h3 id="gdesc1">Sandwich Condiments</h3>
-      <fieldset>
+      <h2>Checkbox example with fieldset and legend</h2>
+       <fieldset>
           <legend>Sandwich Condiments</legend> 
-          <div id="gcb1"
-              role="checkbox" 
-              class="group_checkbox"
-              aria-checked="false" 
-              tabindex="0"
-              onclick="toggleGroupCheckbox(event)" 
-              onkeydown="toggleGroupCheckbox(event)" 
-              onfocus="focusCheckbox(event)" 
-              onblur="blurCheckbox(event)"
-          >
-            <img src="./images/checkbox-unchecked-black.png" alt="">
-            All condiments
-         </div>
-
-         <label>
-            <input type="checkbox" 
-                id="desc1" 
-            >
-              Lettuce
-          </label>
-         
-          <label> 
-            <input type="checkbox" 
-               id="desc2 " 
-               >
-              Tomato
-          </label>
-          <label> 
-            <input type="checkbox" 
-              id="desc3" 
-            >
-              Mustard
-          </label>
-          <label>
-            <input type="checkbox" 
-              id="desc4" 
-            >
-              Sprouts
-          </label> 
+              <div
+                  role="checkbox" 
+                  class="group_checkbox"
+                  aria-checked="false" 
+                  tabindex="0"
+                  onclick="toggleGroupCheckbox(event)" 
+                  onkeydown="toggleGroupCheckbox(event)" 
+                  onfocus="focusCheckbox(event)" 
+                  onblur="blurCheckbox(event)"
+              >
+                <img src="./images/checkbox-unchecked-black.png" alt="unchecked checkbox">
+                All condiments
+            </div>
+            <label><input type="checkbox" id="desc1">Lettuce</label>
+            <label><input type="checkbox" id="desc2 ">Tomato</label>
+            <label><input type="checkbox" id="desc3" >Mustard</label>
+            <label><input type="checkbox" id="desc4" >Sprouts</label> 
       </fieldset>
 
-      <h2>Aria-labelledby example</h2>
+      <h2>Checkbox example with aria-labelledby </h2>
+      <div>
       <h3 id="group1">Sandwich Condiments</h3>
           <div
               role="checkbox" 
@@ -111,6 +89,7 @@
               aria-labelledby="label4 group1">
              <span id="label4"> Sprouts</span>
           </div> 
+        </div>  
 
     </div>
 
