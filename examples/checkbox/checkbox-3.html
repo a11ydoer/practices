@@ -20,6 +20,11 @@
       </ul>
       
       <p> <a href="../../aria-practices.html#checkbox">More information on Checkbox pattern</a></p>
+
+    <div  class="group" id="example"> 
+
+      <h2> Fieldset and legend example</h2>
+      <h3 id="gdesc1">Sandwich Condiments</h3>
       <fieldset class="group" id="example">
           <legend>Sandwich Condiments</legend> 
           <div id="gcb1"
@@ -36,10 +41,59 @@
             All condiments
          </div>
 
+         <label>
+            <input type="checkbox" 
+                id="desc1" 
+                value="lettuce" 
+            >
+              Lettuce
+          </label>
+         
+          <label> 
+            <input type="checkbox" 
+               id="desc2 " 
+               value="tomato" 
+               >
+              Tomato
+          </label>
+          <label> 
+            <input type="checkbox" 
+              id="desc3" 
+              value="mustard"
+            >
+              Mustard
+          </label>
+          <label>
+            <input type="checkbox" 
+              id="desc4" 
+              value="sprouts"
+            >
+              Sprouts
+          </label> 
+      </fieldset>
+
+      <h2>Aria-labelledby example</h2>
+      <h3 id="gdesc1">Sandwich Condiments</h3>
+          <div id="gcb1"
+              role="checkbox" 
+              class="group_checkbox"
+              aria-checked="false" 
+              aria-labelledby="gcb1 gdesc1"
+              tabindex="0"
+              onclick="toggleGroupCheckbox(event)" 
+              onkeydown="toggleGroupCheckbox(event)" 
+              onfocus="focusCheckbox(event)" 
+              onblur="blurCheckbox(event)"
+          >
+            <img src="./images/checkbox-unchecked-black.png" alt="">
+            All condiments
+         </div>
+
           <label>
             <input type="checkbox" 
                 id="desc1" 
                 value="lettuce" 
+                aria-labelledby="desc1 gdesc1"
                 >
               Lettuce
            </label>
@@ -48,6 +102,7 @@
            <input type="checkbox" 
                id="desc2 " 
                value="tomato" 
+               aria-labelledby="desc2 gdesc1"
                >
               Tomato
           </label>
@@ -56,6 +111,7 @@
            <input type="checkbox" 
               id="desc3" 
               value="mustard"
+              aria-labelledby="desc3 gdesc1"
               >
               Mustard
           </label>
@@ -63,10 +119,12 @@
           <input type="checkbox" 
               id="desc4" 
               value="sprouts"
-              >
+              aria-labelledby="desc4 gdesc1">
               Sprouts
           </label> 
-      </fieldset>
+    </div>
+
+
       <h2 id="id_a11yfeature">Accessibility Feature</h2>
              <ul>
                 <li><code>div[role=checkbox]</code> element identifies the <code>div
