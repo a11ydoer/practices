@@ -70,11 +70,11 @@
 
       <h2>Aria-labelledby example</h2>
       <h3 id="group1">Sandwich Condiments</h3>
-          <div id="gcb1"
+          <div
               role="checkbox" 
               class="group_checkbox"
               aria-checked="false" 
-              aria-labelledby="gcb1 group1"
+              aria-labelledby="labelg group1"
               tabindex="0"
               onclick="toggleGroupCheckbox(event)" 
               onkeydown="toggleGroupCheckbox(event)" 
@@ -82,7 +82,7 @@
               onblur="blurCheckbox(event)"
           >
             <img src="./images/checkbox-unchecked-black.png" alt="">
-            All condiments
+            <span id="labelg"> All condiments</span>
          </div>
 
           <div>
@@ -111,7 +111,7 @@
               aria-labelledby="label4 group1">
              <span id="label4"> Sprouts</span>
           </div> 
-          
+
     </div>
 
 
