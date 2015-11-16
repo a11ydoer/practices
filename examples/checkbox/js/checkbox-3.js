@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
   for(var i = 0; i < checkboxes.length; i++ ) {
     var cb = checkboxes[i];
 
-    console.log(cb.tagName + " " + cb.id)
+    //console.log(cb.tagName + " " + cb.id)
 
     cb.addEventListener('change', updateGroupCheckbox);
     cb.addEventListener('focus', focusStandardCheckbox);
@@ -114,7 +114,7 @@ function updateGroupCheckbox(event) {
 * @param   {Object}  event  -  Standard W3C event object
 */
 
-function focusCheckbox(event) {
+function focusCheckbox(event) { 
   event.currentTarget.className += ' focus'
 }
 
