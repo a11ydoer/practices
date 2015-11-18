@@ -12,18 +12,23 @@
   <body>
     <main role="main">
       <h1>ARIA <code>checkbox</code> Role Example: Mixed state checkbox</h1>
+    <p> <a href="../../aria-practices.html#checkbox">WAI-ARIA 1.1 : Checkbox pattern </a></p>
       <ul>
           <li>This example illustrates the use of a mixed state checkbox (e.g. all condiments) with a set of standard HTML checkboxes (e.g, condiments options). </li>
           <li>Changing the state of the standard checkboxes will update the state for the ARIA mixed checkbox. </li> 
           <li>Changing the state of the ARIA mixed checkbox will also update the state of the standard HTML checkboxes.</li>
-          <li><code>role="checkbox"</code> is not applied to the standard checkboxes but is to the aria checkbox.</li>
+          <li><code>role="checkbox"</code> is not applied to the standard checkboxes but is to the aria checkbox</li>
       </ul>
-      
-      <p> <a href="../../aria-practices.html#checkbox">More information on Checkbox pattern</a></p>
 
-    <div  class="group" id="example"> 
-
-      <h2>Checkbox example with fieldset and legend</h2>
+      <h2> Checkbox Examples</h2>
+      <div  class="group" id="example"> 
+      <h3>1. Checkbox example with <code>fieldset</code> and <code>legend</code></h3>
+          <ul>
+              <li>Grouping label (e.g. sandwich Condiments) comes from <code>fieldset/ legend </code>element. </li>
+              <li>This techinique uses label encapsulation.</li>
+              <li>It is up to screen reader when the grouping labels will be read or not.</li> 
+          </ul>    
+      <div id="ex1">
        <fieldset>
           <legend>Sandwich Condiments</legend> 
               <div
@@ -44,15 +49,50 @@
             <label><input type="checkbox" id="desc3" >Mustard</label>
             <label><input type="checkbox" id="desc4" >Sprouts</label> 
       </fieldset>
+      </div>
 
-      <h2>Checkbox example with aria-labelledby </h2>
-      <div>
-      <h3 id="group1">Sandwich Condiments</h3>
+      <h3>2. Checkbox example with <code>role = group</code></h3>
+          <ul>
+              <li>Grouping label comes from <code>role ="group"</code>.</li>
+              <li>It is up to screen reader when the grouping labels will be read or not.</li> 
+          </ul> 
+      <div id="ex2">
+      <div role="group"
+                 aria-label="sandwitch condiment">
+                 <div>Sandwich Condiments</div> 
+              <div
+                  role="checkbox" 
+                  class="group_checkbox"
+                  aria-checked="false" 
+                  tabindex="0"
+                  onclick="toggleGroupCheckbox(event)" 
+                  onkeydown="toggleGroupCheckbox(event)" 
+                  onfocus="focusCheckbox(event)" 
+                  onblur="blurCheckbox(event)"
+              >
+                <img src="./images/checkbox-unchecked-black.png" alt="">
+                All condiments
+            </div>
+            <label><input type="checkbox" id="desc1">Lettuce</label>
+            <label><input type="checkbox" id="desc2 ">Tomato</label>
+            <label><input type="checkbox" id="desc3" >Mustard</label>
+            <label><input type="checkbox" id="desc4" >Sprouts</label> 
+      </div>
+      </div>
+
+      <h3>3. Checkbox example with <code>aria-labelledby </code></h3>
+          <ul>
+              <li>No grouping label is used but grouping label comes from as part of accessible name.</li>
+              <li>This technique forces screen reader to read grouping label.</li>
+              <li>If there is a long list of controls, it can be redunant and problematic since grouping lable will be read with every controls.</li>
+          </ul> 
+      <div id="ex3">
+      <div id="group1">Sandwich Condiments</div>
           <div
               role="checkbox" 
               class="group_checkbox"
               aria-checked="false" 
-              aria-labelledby="labelg group1"
+              aria-labelledby="label0 group1"
               tabindex="0"
               onclick="toggleGroupCheckbox(event)" 
               onkeydown="toggleGroupCheckbox(event)" 
@@ -60,37 +100,30 @@
               onblur="blurCheckbox(event)"
           >
             <img src="./images/checkbox-unchecked-black.png" alt="">
-            <span id="labelg"> All condiments</span>
-         </div>
+            <span id="label0"> All condiments</span>
+          </div>
 
           <div>
-            <input type="checkbox" 
-                aria-labelledby="label1 group1"
-                >
-              <span id="label1">Lettuce</span>
-           </div>
+            <input type="checkbox" aria-labelledby="label1 group1">
+            <span id="label1">Lettuce</span>
+          </div>
          
           <div> 
-           <input type="checkbox" 
-               aria-labelledby="label2 group1"
-               >
-             <span id="label2"> Tomato</span>
+            <input type="checkbox" aria-labelledby="label2 group1">
+            <span id="label2"> Tomato</span>
           </div>
           
           <div> 
-           <input type="checkbox" 
-              aria-labelledby="label3 group1"
-              >
+            <input type="checkbox" aria-labelledby="label3 group1">
             <span id="label3">Mustard</span>
           </div>
 
           <div>
-          <input type="checkbox" 
-              aria-labelledby="label4 group1">
-             <span id="label4"> Sprouts</span>
-          </div> 
+            <input type="checkbox" aria-labelledby="label4 group1">
+            <span id="label4"> Sprouts</span>
+          </div>
         </div>  
-
+      </div>
     </div>
 
 
@@ -175,15 +208,25 @@
         <li>CSS: <a href="css/checkbox-3.css" type="tex/css">checkbox.css</a></li>
         <li>Javascript: <a href="js/checkbox-3.js" type="text/javascript">checkbox.js</a></li>
       </ul>
-      
-      <div id="sc1">
-      
-      </div>
-      
-      <script>
-        sourceCode.add('sc1', 'example')
-        sourceCode.make()
-      </script>
+
+      <h3>HTML Code</h3>
+
+      <h4>1. Checkbox example with <code>fieldset</code> and <code>legend</code></h4>
+      <div id="sc1"></div>
+
+      <h4>2. Checkbox example with <code>role = group</code></h4>
+      <div id="sc2"></div>
+
+      <h4>3. Checkbox example with <code>aria-labelledby </code> </h4>
+      <div id="sc3"></div>
+    
+    <script>
+          sourceCode.add('sc1', 'ex1')
+          sourceCode.add('sc2', 'ex2')
+          sourceCode.add('sc3', 'ex3')
+          sourceCode.make()
+          
+    </script>
 
   </body>
   </html>
