@@ -14,9 +14,9 @@
       <h1>ARIA <code>checkbox</code>: Mixed State Checkbox with Grouping Label</h1>
     <p> <a href="../../aria-practices.html#checkbox">WAI-ARIA 1.1 : Checkbox pattern </a></p>
       <ul>
-          <li>This example uses the native HTML5 sematics for grouping (e.g. fieldset/legend) and is the preferred technique for accessibility.</li>
+          <li>This example uses the native HTML5 semantics for grouping (e.g. fieldset/legend) and is the preferred technique for accessibility.</li>
           <li>This example illustrates the use of a mixed state checkbox (e.g. all condiments) with a set of standard HTML checkboxes, <code>input type="checkbox"</code> (e.g, condiments options). </li>
-          <li>This set of example also illustrates three different techniques for providing a grouping labeling.</li>
+          <li>This set of examples also illustrates three different techniques for providing a grouping label.</li>
           <li>Changing the state of the standard checkboxes will update the state for the ARIA mixed checkbox. </li> 
           <li>Changing the state of the ARIA mixed checkbox will also update the state of the standard HTML checkboxes.</li>
           <li><code>role="checkbox"</code> is only applied to the ARIA mixed checkbox.</li>
@@ -29,7 +29,7 @@
           <ul>
               <li>Grouping label "sandwich condiments" is defined using <code>fieldset/legend </code>elements.</li>
               <li>Labels for standard checkboxes come from <code>label</code> encapsulation technique.</li>
-              <li>Label for ARIA mixed checkbox comes from child text content of the element with <code>[role=checkbox]</code>.</li>
+              <li>Label for ARIA mixed checkbox comes from child text content of the element with <code>role=checkbox</code>.</li>
               <li>Note: It is at the discretion of screen readers to determine when grouping labels are spoken. </li>
           </ul>    
       <div id="ex1">
@@ -57,9 +57,9 @@
 
       <h3>2. Checkbox example with <code>role = group</code></h3>
           <ul>
-              <li>Grouping label “sandwich condiments” defined using <code>[role=group]</code> and <code>[aria-label]</code>.</li>
+              <li>Grouping label “sandwich condiments” defined using <code>role=group</code> and <code>aria-label</code>.</li>
               <li>Labels for standard checkboxes come from <code>label</code> encapsulation technique.</li>
-              <li>Label for ARIA mixed checkbox comes from child text content of the element with <code>[role=checkbox]</code>.</li>
+              <li>Label for ARIA mixed checkbox comes from child text content of the element with <code>role=checkbox</code>.</li>
               <li>Note: It is at the discretion of screen readers to determine when grouping labels are spoken.</li>
           </ul> 
       <div id="ex2">
@@ -88,9 +88,9 @@
 
       <h3>3. Checkbox example with <code>aria-labelledby </code></h3>
           <ul>
-              <li>No grouping label is defined for this example. "sandwitch condiments" is included as part of label for each checkbox.</li>
+              <li>No grouping label is defined for this example. "sandwitch condiments" is included as part of the label for each checkbox.</li>
               <li>Labels for standard checkboxes and ARIA mixed checkbox come from <code>aria-labelledby</code> referencing <code>div</code> element, ''sandwitch condiments" and following <code>span</code> element (e.g. "all condiments", "lettuce", "tomato", "mustard", "sprouts").</li>
-              <li>It is important that grouping label, "sandwitch condiments" is the second reference so that each different condiment option label (e.g. "lettuce") is read first and the same grouping label (e.g. "sandwitch condiments") is read the second (e.g. <code>aria-labelledby="label1 group1"</code> will be read "lettuce, sandwitch condiments").</li>
+              <li>It is important that grouping label, "sandwitch condiments" is the second reference so that each different condiment option label (e.g. "lettuce") is read first and the same grouping label (e.g. "sandwitch condiments") is read second (e.g. <code>aria-labelledby="label1 group1"</code> will be read "lettuce, sandwitch condiments").</li>
               <li>Note: The screen readers will always include “sandwich condiments” (e.g. grouping label) when a checkbox receives keyboard focus, which can be distracting when navigating a long list of controls in the same group.</li>
           </ul> 
       <div id="ex3">
@@ -136,11 +136,11 @@
 
       <h2 id="id_a11yfeature">Common Accessibility Features</h2>
              <ul>
-                 <li>The examples use the native HTML5 sematics for checkboxes when possible (e.g. the non-mixed state checkboxes) and is the preferred technique for defining checkbox inputs.</li>
-                <li><code> div[role=checkbox]</code> element identifies the <code>div</code> element as a checkbox (e.g. All Condiments checkbox), which supports a mixed state.</li>
-                <li><code>div[role=checkbox]</code> element has <code>onkeydown</code> event to support keyboard activation of the checkbox.</li>
-                <li><code>div[role=checkbox]</code> element has <code>onclick</code> event to support mouse pointer activation of the checkbox.</li>
-                <li><code>div[role=checkbox]</code> element has <code>tabindex="0"</code> to become part of the tab order of the page.</li>
+                 <li>The examples use the native HTML5 semantics for checkboxes when possible (e.g. the non-mixed state checkboxes) and is the preferred technique for defining checkbox inputs.</li>
+                <li><code>div</code> element with role <code>checkbox</code> identifies the <code>div</code> element as a checkbox (e.g. All Condiments checkbox), which supports a mixed state.</li>
+                <li><code>div</code> element with role <code>checkbox</code> has <code>onkeydown</code> event to support keyboard activation of the checkbox.</li>
+                <li><code>div</code> element with role <code>checkbox</code> has <code>onclick</code> event to support mouse pointer activation of the checkbox.</li>
+                <li><code>div</code> element with role <code>checkbox</code>has <code>tabindex="0"</code> to become part of the tab order of the page.</li>
                 <li> <code>img</code> element is used to visually indicate the state of checkbox (e.g. checked, mixed, unchecked) to ensure the visual state will be visible when browsers or operating system use “High Contrast” settings by people with visual impairments. (Note: CSS background image techniques or generated content result in visual state disappearing when browsers or operating systems are configured to display high contrast themes.)
                <li><code>toggleGroupCheckbox(event)</code> uses <code>aria-checked</code> attribute to determine which image is displayed to ensure the information communicated to asssitive tecnology is the same as the visual state (e.g. <code>img</code> element).</li>
                 <li><code> onfocus</code> and <code> onblur</code> event handlers on both aria checkbox and standard HTML checkboxes support visual focus styling for keyboard only users.</li>
