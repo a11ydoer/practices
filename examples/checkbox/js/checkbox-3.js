@@ -5,8 +5,6 @@ window.addEventListener('load', function() {
   for(var i = 0; i < checkboxes.length; i++ ) {
     var cb = checkboxes[i];
 
-    //console.log(cb.tagName + " " + cb.id)
-
     cb.addEventListener('change', updateGroupCheckbox);
     cb.addEventListener('focus', focusStandardCheckbox);
     cb.addEventListener('blur', blurStandardCheckbox);
