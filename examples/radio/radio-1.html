@@ -14,22 +14,22 @@
       <h1>ARIA <code>radiogroup</code> Example</h1>
       <p> <a href="../../aria-practices.html#h-radiobutton">WAI-ARIA 1.1 : Radio group pattern </a></p>
       <ul>
-          <li>Use a container with a role <code>radiogroup</code> for the set of radio buttons.</li>
-          <li>An individual radio button has a role of <code>radio</code>.</li>
-          <li> If selected, he radio button has the state <code>aria-checked="true"</code>.</li>
-          <li>If not selected, it has the state <code>aria-checked="false"</code>.</li>
-          <li>It is recommended that both the radiogroup and the radio button have a label that is visible and referenced using the <code>aria-labelledby</code> property.</li>
-          <li> Use an <code>aria-describedby</code> property to add additional information to the radio buttons or radiogroup.</li>
+          <li>The <code>radiogroup</code> role defines a container for a set of ARIA radio buttons.</li>
+          <li>The radio button that is currently selected is identified using <code>aria-checked=“true”</code></li>
+          <li>Only one radio button can be selected at a time, all other radio buttons should define <code>aria-checked</code> as “false".</li> 
+          <li>The label for the radio group is defined using <code>aria-labelledby</code> attribute (e.g. “Pizza Crust”)</li>
+          <li>The labels for the radio buttons are defined by the text nodes of each radio button (e.g. “Regular Crust”, “Deep Dish”…)</li>
+          <li>test2</li>
       </ul>
       <div id="codeex">
-          <div  role="radiogroup" area-labelledby="gdesc1" id="example">
+          <div  role="radiogroup" aria-labelledby="gdesc1" id="example">
               <h3 id="gdesc1">Pizza Crust</h3>
               <div id="rb1"
                   role="radio" 
-                  aria-checked="true"
+                  aria-checked="false"
                   tabindex="0"
               >
-                <img src="./images/radio-checked.png" alt="">
+                <img src="./images/radio-unchecked.png" alt="">
                 Regular crust
              </div>
              
@@ -55,12 +55,10 @@
       
       <h2 id="id_a11yfeature">Accessibility Feature</h2>
              <ul>
-                 <li><code>div</code> element with role <code>radiogroup</code> identifies radio grouping label. (e.g. pizza crust)</li>
-                <li><code> aria-labelledby</code> attribute is used to identify the grouping label.</li> 
                 <li><code>div</code> element with role <code>radio</code> has <code>onkeydown</code> event to support keyboard activation of the radio.</li>
                 <li><code>div</code> element with role <code>radio</code> has <code>tabindex="0"</code> to become part of the tab order of the page.</li>
                 <li><code>img</code> element is used to visually indicate the state of radio (e.g. checked,unchecked) to ensure the visual state will be visible when browsers or operating system use “High Contrast” settings by people with visual impairments. (Note: CSS background image techniques or generated content result in visual state disappearing when browsers or operating systems are configured to display high contrast themes.)</li>
-                <li><code>setRadioButton</code> uses <code>aria-checked</code> attribute to make sure the information communicated to asssitive tecnology is the same as the visual state (e.g. <code>img </code>element). </li>
+                <li><code>setRadioButton</code> function uses <code>aria-checked</code> attribute to make sure the information communicated to asssitive tecnology is the same as the visual state (e.g. <code>img </code>element). </li>
                 <li><code>onfocus</code>  and <code>onblur</code> event handlers on <code>radio</code> support visual focus styling for keyboard only users.</li>
               </ul>
 
@@ -75,11 +73,11 @@
         <tbody>
           <tr>
             <td>Tab</td>
-            <td>Moves keyboard focus to radio.</td>
+            <td>Moves keyboard focus to radiogroup.</td>
           </tr>
           <tr>
-            <td>Space</td>
-            <td>Toggle the radio option either true or false.</td>
+            <td>Up and Down arrow</td>
+            <td>Moves up and down radio options.</td>
           </tr>
         </tbody>
       </table>
@@ -99,17 +97,21 @@
             <td>Radiogroup</td>
             <td></td>
             <td>
-              Identify div as Radiogroup widget
+              <ul>
+                <li>Identify div as a contatiner for radios</li>
+              </ul> 
             </td>
           </tr>
           <tr>
+            <td>Radio</td>
             <td>aria-checked</td>
-            <td></td>
             <td>
-                Indicate state of radio: 
                 <ul>
-                  <li>Checked  (e.g. aria-checked=true) </li>
-                  <li>Unchecked  (e.g. aria-checked=false)</li>
+                  <lI>Indicate state of radio: </lI>
+                    <ul>
+                      <li>Checked  (e.g. aria-checked=true) </li>
+                      <li>Unchecked  (e.g. aria-checked=false)</li>
+                    </ul>  
                 </ul>
             </td>
           </tr>
@@ -117,7 +119,9 @@
             <td>aria-labelledby</td>
             <td></td>
             <td>
-            Used to indicate grouping label
+                 <ul>
+                  <li>Used to identify radio group</li>
+                 </ul>
             </td>
           </tr>
         </tbody>
