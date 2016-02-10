@@ -1,0 +1,35 @@
+a[role=button] {
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  border-style: solid;
+  min-width: 20px;
+}
+
+[role="menu"] {
+  padding: 0;
+  border: thin solid black;
+  background-color: #EEEEEE;
+
+}
+
+[role="menuitem"] {
+  padding: 0.5em;
+  display: block;
+  text-decoration: none; 
+}
+
+[role="menuitem"]:focus,
+[role="menuitem"]:hover {
+  background-color: #FFFFFF;
+  border:2px solid #009;
+  display: block;
+}
+h3{
+  font-size: 120%;
+}
+ul#list{
+  list-style-type: none;
+}
