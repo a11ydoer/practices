@@ -23,26 +23,19 @@
        <div role="checkbox" aria-checked="false"  tabindex= "0" onkeydown="toggleCheckbox(event)" onclick="toggleCheckbox(event)" onfocus="focusCheckbox(event)" onblur="blurCheckbox(event)"><img src="./images/checkbox-unchecked-black.png" role="presentation"> Label 1</div> 
        <div role="checkbox" aria-checked="true" tabindex= "0" onkeydown="toggleCheckbox(event)" onclick="toggleCheckbox(event)" onfocus="focusCheckbox(event)" onblur="blurCheckbox(event)"><img src="./images/checkbox-checked-black.png" role="presentation"> Label 2</div> 
        <div role="checkbox" aria-checked="false" tabindex= "0" onkeydown="toggleCheckbox(event)" onclick="toggleCheckbox(event)" onfocus="focusCheckbox(event)" onblur="blurCheckbox(event)"><img src="./images/checkbox-unchecked-black.png" role="presentation"> Label 3</div> 
-
-        
-      </div>
+    </div>
 
     <h2 id="id_a11yfeature">Accessibility Feature</h2>
-    <ul>
-              <li><code>div</code> element with <code>role="checkbox"</code>.</li>
-              <li><code>div</code> element has <code>onclick</code> event to handle mouse clicks.</li>
-              <li><code>div</code> element has <code>onkeydown</code> event to handle keyboard support.</li>
-              <li><code>div</code> element has <code>tabindex="0"</code> to become part of tab order of the page.</li>
-              <li><code>img </code>elements are used to visually indicate the state because using css techniqes or generated content result in visual state disappearing when browsers or operating systems are configured to display high contrast themes. </li>
-               <li><code>toggleCheckbox(event)</code> uses <code>aria-checked</code> state to make sure the ARIA and visual state (e.g. <code>img </code>element) of the checkbox stay synchronizd. </li>
-               <li><code>focus</code> <code>blur </code> events are used to provide visual styling of keyboard focus. </li>
-            </ul>
-
-
-    
-
-
-
+       <ul>
+        <li><code>div</code> element with <code>role="checkbox"</code>.</li>
+        <li><code>div</code> element has <code>onclick</code> event to handle mouse clicks.</li>
+        <li><code>div</code> element has <code>onkeydown</code> event to handle keyboard support.</li>
+        <li><code>div</code> element has <code>tabindex="0"</code> to become part of tab order of the page.</li>
+        <li><code>img </code>elements are used to visually indicate the state because using css techniqes or generated content result in visual state disappearing when browsers or operating systems are configured to display high contrast themes. </li>
+        <li><code>toggleCheckbox(event)</code> uses <code>aria-checked</code> state to make sure the ARIA and visual state (e.g. <code>img </code>element) of the checkbox stay synchronizd. </li>
+        <li><code>focus</code> <code>blur </code> events are used to provide visual styling of keyboard focus. </li>
+       </ul>
+       
     <h2 id="id_kbd">Keyboard Support</h2>
 
     <table aria-labelledby="id_kbd"> 
