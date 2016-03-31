@@ -1,0 +1,12 @@
+[role="menu"] {
+    display: none;
+}
+
+a[role="menuitem"] {
+    display: block;
+}
+
+[role="menu"]:hover {
+    display: block;
+}
+
